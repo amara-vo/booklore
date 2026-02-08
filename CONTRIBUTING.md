@@ -2,6 +2,9 @@
 
 🎉 **Thank you for your interest in contributing to Booklore!** Whether you're fixing bugs, adding features, improving documentation, or simply asking questions, every contribution helps make Booklore better for everyone.
 
+Jump to:
+[Getting Started](#-getting-started) • [Report a Bug](#-bugs--feature-requests) • [Community Support](#-community--support) • [PR Checklist](#-submitting-code-changes)
+
 ---
 
 ## 📚 What is Booklore?
@@ -331,9 +334,7 @@ BREAKING CHANGE: OAuth 2.0 is no longer supported
 
 ## 📤 Submitting Code Changes
 
-To maintain the stability of Booklore, we enforce a **strict review process**. We have experienced production issues due to incomplete testing. To protect the project, PRs that do not meet these testing standards will be returned for completion.
-
-Follow these steps to ensure a smooth review process:
+To maintain the stability of Booklore, we enforce a **strict review process**. Follow these steps to ensure a smooth review process:
 
 1. **Sync with `develop` branch:** Ensure your branch is up to date with the latest develop branch and resolve any conflicts.
 2. **Run Local Tests:**
@@ -341,7 +342,7 @@ Follow these steps to ensure a smooth review process:
    - Frontend: Run `ng test`
 3. **Open a Pull Request:** Submit your PR against the `develop` branch.
 
-### Pull Request Mandatory Checklist
+### **Pull Request Mandatory Checklist**
 
 When you open a PR, a template will automatically appear. Follow these ***mandatory requirements*** to avoid your PR being sent back:
 
