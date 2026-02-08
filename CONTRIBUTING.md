@@ -47,18 +47,20 @@ git remote add upstream https://github.com/booklore-app/booklore.git
 
 ### 2. Keep Your Fork Updated
 
-Before starting work on a new feature or fix:
+Before starting work on a new feature or fix, ensure your local `develop` branch is in sync with the upstream repository:
 
 ```bash
-# Fetch latest changes from upstream
+# Ensure you are on the develop branch
+git checkout develop
+
+# Fetch latest changes from the original Booklore repo
 git fetch upstream
 
-# Merge upstream changes into your local main branch
-git checkout main
-git merge upstream/main
+# Merge those changes into your local develop branch
+git merge upstream/develop
 
-# Push updates to your fork
-git push origin main
+# Push updates to your Github fork
+git push origin develop
 ```
 
 ---
@@ -305,7 +307,7 @@ git checkout -b refactor/improve-authentication-flow
 
 #### Development Workflow
 
-1. **Create a branch** from `develop` (not `main`)
+1. **Create a branch** from `develop`
 2. **Make your changes** in small, logical commits
 3. **Test thoroughly** - run both frontend and backend tests
 4. **Update documentation** if your changes affect usage
