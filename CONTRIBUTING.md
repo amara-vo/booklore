@@ -198,12 +198,12 @@ curl http://localhost:8080/actuator/health
 
 To keep the project history clean and manageable, please follow this cycle:
 
-1. **Create a branch** from `develop`
+1. **Create a branch** from `develop` (see [Branch Naming Convention](#branch-naming-convention))
 2. **Make your changes** in small, logical commits
 3. **Test thoroughly** - run both frontend and backend tests
 4. **Update documentation** if your changes affect usage
 5. **Run the linter** and fix any issues
-6. **Commit with clear messages** following Conventional Commits
+6. **Commit with clear messages** (see [Commit Message Format](#commit-message-format))
 7. **Push to your fork**
 8. **Open a pull request** targeting the `develop` branch
 
@@ -364,11 +364,12 @@ To help us stay organized, please follow these steps when reporting a bug or sug
 
 2. **Select a template:** If you don't find a duplicate, **[open a new issue](https://github.com/booklore-app/booklore/issues/new/choose)** and choose the appropriate template:
 
-- Bug Report – For reporting unexpected behavior or technical errors.
+    |Template | Description |
+    | -- | -- |
+    | Bug Report | For reporting unexpected behavior or technical errors.|
+    | Feature Request | For proposing new functionality or UI/UX improvements. |
 
-- Feature Request – For proposing new functionality or UI/UX improvements.
-
-1. **Provide detail:** Fill out the template fields as completely as possible. For large features, we recommend discussing your idea in our [Discord](https://discord.gg/Ee5hd458Uz) first!
+3. **Provide detail:** Fill out the template fields as completely as possible. For large features, we recommend discussing your idea in our [Discord](https://discord.gg/Ee5hd458Uz) first!
 
 ---
 
