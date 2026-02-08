@@ -94,8 +94,6 @@ docker compose -f dev.docker-compose.yml up
 docker compose -f dev.docker-compose.yml down
 ```
 
----
-
 ### Option 2: Manual Local Development
 
 For more control over your development environment, you can run each component separately.
@@ -129,8 +127,6 @@ The frontend will be available at `http://localhost:4200/` with hot-reload enabl
 **Common Issues:**
 - If you encounter dependency conflicts, try `npm install --legacy-peer-deps`
 - Use `--force` only as a last resort
-
----
 
 #### Backend Setup
 
@@ -195,6 +191,21 @@ curl http://localhost:8080/actuator/health
 
 ---
 
+## 🔃 Development Workflow
+
+To keep the project history clean and manageable, please follow this cycle:
+
+1. **Create a branch** from `develop`
+2. **Make your changes** in small, logical commits
+3. **Test thoroughly** - run both frontend and backend tests
+4. **Update documentation** if your changes affect usage
+5. **Run the linter** and fix any issues
+6. **Commit with clear messages** following Conventional Commits
+7. **Push to your fork**
+8. **Open a pull request** targeting the `develop` branch
+
+---
+
 ## 🧪 Testing
 
 Always run tests before submitting a pull request to ensure your changes don't break existing functionality.
@@ -242,9 +253,99 @@ cd booklore-api
 
 ---
 
-## 🛠️ Contributing Guidelines
+## 🧼 Code Style & Conventions
 
-### 💡 Reporting Bugs
+- **Angular**: Follow the [official style guide](https://angular.io/guide/styleguide)
+- **Java**: Use modern features (Java 21), clean structure
+- **Linter**: Use IntelliJ IDEA's built-in linter for code formatting and style checks
+- **UI**: Use SCSS and PrimeNG components consistently
+
+### Branch Naming Convention
+
+Create descriptive branches that clearly indicate the purpose of your changes:
+
+```bash
+# For new features
+git checkout -b feat/add-dark-mode-theme
+git checkout -b feat/epub-reader-support
+
+# For bug fixes
+git checkout -b fix/book-import-validation
+git checkout -b fix/memory-leak-in-scanner
+
+# For documentation
+git checkout -b docs/update-installation-guide
+
+# For refactoring
+git checkout -b refactor/improve-authentication-flow
+```
+
+### Commit Message Format
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/) for clear, standardized commit messages.
+
+#### Format
+
+```
+<type>(<scope>): <subject>
+
+[optional body]
+
+[optional footer]
+```
+
+#### Types
+
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, no logic change)
+- `refactor`: Code refactoring
+- `test`: Adding or updating tests
+- `chore`: Maintenance tasks
+- `perf`: Performance improvements
+
+#### Examples
+
+```bash
+# Feature addition
+feat(reader): add keyboard navigation for page turning
+
+# Bug fix
+fix(api): resolve memory leak in book scanning service
+
+# Documentation
+docs(readme): add troubleshooting section for Docker setup
+
+# Multiple scopes
+feat(api,ui): implement book collection management
+
+# Breaking change
+feat(auth)!: migrate to OAuth 2.1
+
+BREAKING CHANGE: OAuth 2.0 is no longer supported
+```
+
+---
+
+
+## 📤 Submitting Code Changes
+
+### Pull Request Checklist
+
+Before submitting, ensure:
+- [ ] Code follows project conventions
+- [ ] All tests pass (`./gradlew test` for backend)
+- [ ] IntelliJ linter shows no errors
+- [ ] Changes are documented (README, inline comments)
+- [ ] PR description clearly explains what and why
+- [ ] PR is linked to a related issue (if applicable)
+- [ ] Branch is up-to-date with `develop`
+- [ ] **For big features:** Create a documentation PR at [booklore-docs](https://github.com/booklore-app/booklore-docs) with styling similar to other documentation pages
+
+---
+
+## 💡 Reporting Bugs
 
 Found a bug? Help us fix it by providing detailed information:
 
@@ -279,110 +380,6 @@ the changes appear to save but revert after page refresh.
 - Browser: Chrome 120
 - OS: macOS 14.2
 - Booklore Version: 1.2.0
-```
-
----
-
-### 🔃 Submitting Code Changes
-
-#### Branch Naming Convention
-
-Create descriptive branches that clearly indicate the purpose of your changes:
-
-```bash
-# For new features
-git checkout -b feat/add-dark-mode-theme
-git checkout -b feat/epub-reader-support
-
-# For bug fixes
-git checkout -b fix/book-import-validation
-git checkout -b fix/memory-leak-in-scanner
-
-# For documentation
-git checkout -b docs/update-installation-guide
-
-# For refactoring
-git checkout -b refactor/improve-authentication-flow
-```
-
-#### Development Workflow
-
-1. **Create a branch** from `develop`
-2. **Make your changes** in small, logical commits
-3. **Test thoroughly** - run both frontend and backend tests
-4. **Update documentation** if your changes affect usage
-5. **Run the linter** and fix any issues
-6. **Commit with clear messages** following Conventional Commits
-7. **Push to your fork**
-8. **Open a pull request** targeting the `develop` branch
-
-#### Pull Request Checklist
-
-Before submitting, ensure:
-- [ ] Code follows project conventions
-- [ ] All tests pass (`./gradlew test` for backend)
-- [ ] IntelliJ linter shows no errors
-- [ ] Changes are documented (README, inline comments)
-- [ ] PR description clearly explains what and why
-- [ ] PR is linked to a related issue (if applicable)
-- [ ] Branch is up-to-date with `develop`
-- [ ] **For big features:** Create a documentation PR at [booklore-docs](https://github.com/booklore-app/booklore-docs) with styling similar to other documentation pages
-
----
-
-## 🧼 Code Style & Conventions
-
-- **Angular**: Follow the [official style guide](https://angular.io/guide/styleguide)
-- **Java**: Use modern features (Java 21), clean structure
-- **Linter**: Use IntelliJ IDEA's built-in linter for code formatting and style checks
-- **UI**: Use SCSS and PrimeNG components consistently
-
----
-
-## 📝 Commit Message Format
-
-We follow [Conventional Commits](https://www.conventionalcommits.org/) for clear, standardized commit messages.
-
-### Format
-
-```
-<type>(<scope>): <subject>
-
-[optional body]
-
-[optional footer]
-```
-
-### Types
-
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style changes (formatting, no logic change)
-- `refactor`: Code refactoring
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks
-- `perf`: Performance improvements
-
-### Examples
-
-```bash
-# Feature addition
-feat(reader): add keyboard navigation for page turning
-
-# Bug fix
-fix(api): resolve memory leak in book scanning service
-
-# Documentation
-docs(readme): add troubleshooting section for Docker setup
-
-# Multiple scopes
-feat(api,ui): implement book collection management
-
-# Breaking change
-feat(auth)!: migrate to OAuth 2.1
-
-BREAKING CHANGE: OAuth 2.0 is no longer supported
 ```
 
 ---
