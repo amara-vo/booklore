@@ -372,33 +372,17 @@ To help us stay organized, please follow these steps when reporting a bug or sug
 
 ---
 
-## 🙏 Code of Conduct
-
-We're committed to providing a welcoming and inclusive environment for everyone.
-
-**Our Standards:**
-- ✅ Be respectful and considerate
-- ✅ Welcome newcomers and help them learn
-- ✅ Accept constructive criticism gracefully
-- ✅ Focus on what's best for the community
-
-**Unacceptable Behavior:**
-- ❌ Harassment, trolling, or discrimination
-- ❌ Personal attacks or insults
-- ❌ Publishing others' private information
-- ❌ Any conduct that would be inappropriate in a professional setting
-
-**Enforcement:**
-Instances of unacceptable behavior may result in temporary or permanent ban from the project.
-
----
-
 ## 💬 Community & Support
 
 **Need help or want to discuss ideas?**
 
 - 💬 **Discord**: [Join our server](https://discord.gg/Ee5hd458Uz)
 - 🐛 **Issues**: [GitHub Issues](https://github.com/booklore-app/booklore/issues)
+
+
+**Code of Conduct**
+
+This project and everyone participating in it is governed by our [Code of Conduct](.github/CODE_OF_CONDUCT.md). By contributing, you are expected to uphold this code.
 
 ---
 
