@@ -331,17 +331,27 @@ BREAKING CHANGE: OAuth 2.0 is no longer supported
 
 ## 📤 Submitting Code Changes
 
-### Pull Request Checklist
+To maintain the stability of Booklore, we enforce a **strict review process**. We have experienced production issues due to incomplete testing. To protect the project, PRs that do not meet these testing standards will be returned for completion.
 
-Before submitting, ensure:
-- [ ] Code follows project conventions
-- [ ] All tests pass (`./gradlew test` for backend)
-- [ ] IntelliJ linter shows no errors
-- [ ] Changes are documented (README, inline comments)
-- [ ] PR description clearly explains what and why
-- [ ] PR is linked to a related issue (if applicable)
-- [ ] Branch is up-to-date with `develop`
-- [ ] **For big features:** Create a documentation PR at [booklore-docs](https://github.com/booklore-app/booklore-docs) with styling similar to other documentation pages
+Follow these steps to ensure a smooth review process:
+
+1. **Sync with `develop` branch:** Ensure your branch is up to date with the latest develop branch and resolve any conflicts.
+2. **Run Local Tests:**
+   - Backend: Run `./gradlew test`
+   - Frontend: Run `ng test`
+3. **Open a Pull Request:** Submit your PR against the `develop` branch.
+
+### Pull Request Mandatory Checklist
+
+When you open a PR, a template will automatically appear. Follow these ***mandatory requirements*** to avoid your PR being sent back:
+
+- [ ] **Code adheres to project style guidelines and conventions**
+- [ ] **Branch synchronized with latest `develop` branch** 
+- [ ] **🚨 Automated unit tests added/updated to cover changes** _(for ALL Spring Boot backend and Angular frontend changes)_
+- [ ] **🚨 All tests pass locally** _(run `./gradlew test` for Spring Boot backend, and `ng test` for Angular frontend)_
+- [ ] **🚨 Manual testing completed in local development environment** _(verify your changes work AND no existing functionality is broken - test related features thoroughly)_
+- [ ] **Flyway migration versioning follows correct sequence** _(if database schema was modified)_
+- [ ] **Documentation PR submitted to [booklore-docs](https://github.com/booklore-app/booklore-docs)** _(required for features or enhancements that introduce user-facing or visual changes)_
 
 ---
 
