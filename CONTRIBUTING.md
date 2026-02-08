@@ -345,42 +345,19 @@ Before submitting, ensure:
 
 ---
 
-## 💡 Reporting Bugs
+## 💡 Bugs & Feature Requests
 
-Found a bug? Help us fix it by providing detailed information:
+To help us stay organized, please follow these steps when reporting a bug or suggesting an improvement:
 
-1. **Search existing issues** to avoid duplicates
-2. **Create a new issue** with the `bug` label
-3. **Include the following:**
-   - Clear, descriptive title (e.g., "Book import fails with PDF files over 100MB")
-   - Steps to reproduce the issue
-   - Expected behavior vs. actual behavior
-   - Screenshots or error logs if applicable
-   - Your environment (OS, browser, Docker version, etc.)
+1. **Search issues:** Check **[ existing issues](https://github.com/booklore-app/booklore/issues)** to see if your topic has already been addressed.
 
-**Example Bug Report:**
-```markdown
-**Title:** Book metadata not updating after manual edit
+2. **Select a template:** If you don't find a duplicate, **[open a new issue](https://github.com/booklore-app/booklore/issues/new/choose)** and choose the appropriate template:
 
-**Description:**
-When I manually edit a book's metadata through the UI and click Save, 
-the changes appear to save but revert after page refresh.
+- Bug Report – For reporting unexpected behavior or technical errors.
 
-**Steps to Reproduce:**
-1. Navigate to any book detail page
-2. Click "Edit Metadata"
-3. Change the title from "Old Title" to "New Title"
-4. Click "Save"
-5. Refresh the page
+- Feature Request – For proposing new functionality or UI/UX improvements.
 
-**Expected:** Title should remain "New Title"
-**Actual:** Title reverts to "Old Title"
-
-**Environment:**
-- Browser: Chrome 120
-- OS: macOS 14.2
-- Booklore Version: 1.2.0
-```
+1. **Provide detail:** Fill out the template fields as completely as possible. For large features, we recommend discussing your idea in our [Discord](https://discord.gg/Ee5hd458Uz) first!
 
 ---
 
